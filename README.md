@@ -17,7 +17,7 @@ https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
 # 使い方
 シリアルポートからコマンドを送ることで、M5Stamp Flyに制御コードを送ります。  
 prset ペアリングリセットコマンド  
-ペアリングした機体と別の期待にペアリングする場合に、M5Stamp本体の電源を入れた状態でこのコマンドを送るとペアリングを行います。  
+ペアリングした機体と別の期待にペアリングする場合に、M5Stamp Fly本体の電源を入れた状態でこのコマンドを送るとペアリングを行います。  
   
 takeoff テイクオフコマンド  
 200mm程浮上します。  
