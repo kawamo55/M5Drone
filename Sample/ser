@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+import serial as sel
+import time
+
+DEVNAME = "/dev/ttyACM0"
+BUFSIZE = 128
+
+s = sel.Serial(DEVNAME,baudrate=19200,parity=sel.PARITY_NONE,timeout=0.01)
+
+def tryKey(n):
+    c = 0
+    try:
+        flag=True
+        while flag:
+            str = s.readline().decode()
+            if len(str) > 0:
+                print(f'{c}:{str}')
+            c += 1
+            if (c % n)==0:
+                flag=False
+    except KeyboardInterrupt:
+        print("Exit Key Event")
+
+tryKey(100)
+s.write(b'takeoff\n')
+tryKey(300)
+s.write(b'fend\n')
+tryKey(200)
+
+s.close()
