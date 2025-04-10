@@ -12,6 +12,8 @@ https://github.com/m5stack/Atom-JoyStick/
 コンパイル環境は、Arduino IEDでボードマネージャに下記URLを追加してM5StampS3を選択します。  
 https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json  
 
+そのあと、StampCTLフォルダにあるStampCTL.inoをArduino IDEで開いてコンパイルおよび書き込みします。
+
 # 使い方
 シリアルポートからコマンドを送ることで、M5Stamp Flyに制御コードを送ります。  
 prset ペアリングリセットコマンド  
@@ -24,5 +26,5 @@ takeoff テイクオフコマンド
   
 fend 着地コマンド  
 強制着地します。  
-
-
+  
+SampleフォルダにPythonで書いたサンプルプログラムを置いてあります。  
